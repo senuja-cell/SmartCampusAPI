@@ -18,7 +18,11 @@ public class DiscoveryResource {
         response.put("version", "1.0");
         response.put("name", "Smart Campus API");
         response.put("description", "REST API for managing campus rooms, sensors and readings");
-        response.put("contact", "w2120691@my.westminster.ac.uk");
+
+        Map<String, String> contact = new HashMap<>();
+        contact.put("owner", "Senuja Ranmith");
+        contact.put("email", "w2120691@westminster.ac.uk");
+        response.put("contact", contact);
 
         Map<String, String> links = new HashMap<>();
         links.put("rooms", "/api/v1/rooms");
